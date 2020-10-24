@@ -38,11 +38,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Installer Info'),
         ),
         body: Center(
           child: Text(
-            'Running on: ${installerInfo.installer} - ${installerInfo.installerName}',
+            'Installed by:\n${installerInfo?.installer}\n${installerInfo?.installerName}',
+            textAlign: TextAlign.center,
           ),
         ),
       ),
