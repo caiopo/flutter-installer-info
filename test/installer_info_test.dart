@@ -3,13 +3,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:installer_info/installer_info.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('installer_info');
+  const MethodChannel channel = MethodChannel('com.caiopo.installer_info');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+      if (methodCall.method == 'getInstallerInfo') {
+        return 'com.android.vending';
+      }
     });
   });
 
@@ -17,7 +19,9 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await InstallerInfo.platformVersion, '42');
+  test('getInstallerInfo', () async {
+    final installerInfo = await getInstallerInfo();
+    expect(installerInfo.installerName, 'com.android.vending');
+    expect(installerInfo.installer, Installer.googlePlay);
   });
 }
