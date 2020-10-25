@@ -1,15 +1,31 @@
 # installer_info
 
-A new Flutter plugin.
+Returns information about the method used to install your app.
 
-## Getting Started
+On Android, uses `context.getInstallerPackageName()``
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+On iOS, parses `Bundle.main.appStoreReceiptURL`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
+Installing
+----------
+
+Add to your pubspec.yaml
+
+```yaml
+dependencies:
+  installer_info: <version>
+```
+
+
+Example
+-------
+```dart
+final installerInfo = await getInstallerInfo();
+
+print(installerInfo.installerName);
+// com.android.vending
+
+print(installerInfo.installer);
+// Installer.googlePlay
+```
