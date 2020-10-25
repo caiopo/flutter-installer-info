@@ -2,7 +2,7 @@
 
 Returns information about the method used to install your app.
 
-On Android, uses `context.getInstallerPackageName()``
+On Android, uses `context.getInstallerPackageName()`
 
 On iOS, parses `Bundle.main.appStoreReceiptURL`
 
