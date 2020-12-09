@@ -2,8 +2,8 @@
 
 Returns information about the method used to install your app.
 
-On Android, uses `context.getInstallerPackageName()`
-
+On Android API 29 and below, uses `Context.getInstallerPackageName()`
+On Android API 30 and above, uses `PackageManager.getInstallSourceInfo()`
 On iOS, parses `Bundle.main.appStoreReceiptURL`
 
 

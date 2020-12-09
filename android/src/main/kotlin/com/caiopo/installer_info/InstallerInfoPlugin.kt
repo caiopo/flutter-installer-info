@@ -2,7 +2,6 @@ package com.caiopo.installer_info
 
 import android.content.Context
 import android.content.pm.InstallSourceInfo
-import android.content.pm.PackageManager.NameNotFoundException
 import android.os.Build
 import androidx.annotation.NonNull
 import io.flutter.embedding.engine.plugins.FlutterPlugin

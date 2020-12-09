@@ -1,3 +1,7 @@
+## 0.2.0
+* Add new method of retrieving the installed on Android SDK 30
+* Fix deprecation warning on Android SDK 30
+
 ## 0.1.2
 * Improve plugin description
 
