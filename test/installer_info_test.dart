@@ -20,8 +20,8 @@ void main() {
   });
 
   test('getInstallerInfo', () async {
-    final installerInfo = await (getInstallerInfo() as FutureOr<InstallerInfo>);
-    expect(installerInfo.installerName, 'com.android.vending');
+    final installerInfo = await getInstallerInfo();
+    expect(installerInfo!.installerName, 'com.android.vending');
     expect(installerInfo.installer, Installer.googlePlay);
   });
 }
