@@ -1,3 +1,6 @@
+## 0.4.0
+* Upgrade Kotlin to 1.8.0 and Gradle to 6.8.3
+
 ## 0.3.0
 * Fix deprecation warning on Android SDK 30
 
