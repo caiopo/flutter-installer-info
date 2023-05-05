@@ -1,3 +1,6 @@
+## 0.5.0
+* Add compatibility with AGP 8 (Android Gradle Plugin).
+
 ## 0.4.0
 * Upgrade Kotlin to 1.8.0 and Gradle to 6.8.3
 
