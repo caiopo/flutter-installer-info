@@ -1,6 +1,6 @@
 name: installer_info
 description: Returns information about the method used to install your app.
-version: 0.4.0
+version: 0.5.0
 homepage: https://github.com/caiopo/flutter-installer-info
 repository: https://github.com/caiopo/flutter-installer-info
 
