@@ -30,7 +30,7 @@ android {
         namespace 'com.caiopo.installer_info'
     }
 
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
