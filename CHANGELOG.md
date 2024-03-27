@@ -1,3 +1,6 @@
+## 0.5.1
+* Support different Kotlin versions by using jvmTarget.
+
 ## 0.5.0
 * Add compatibility with AGP 8 (Android Gradle Plugin).
 
