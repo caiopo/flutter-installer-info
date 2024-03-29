@@ -1,4 +1,4 @@
-## 0.5.1
+## 0.6.0
 * Support different Kotlin versions by using jvmTarget.
 
 ## 0.5.0
