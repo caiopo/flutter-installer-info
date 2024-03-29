@@ -14,7 +14,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  InstallerInfo installerInfo;
+  InstallerInfo? installerInfo;
+  String? error;
 
   @override
   void initState() {
@@ -23,10 +24,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initPlatformState() async {
-    InstallerInfo installerInfo;
+    InstallerInfo? installerInfo;
     try {
       installerInfo = await getInstallerInfo();
-    } on PlatformException {}
+    } on PlatformException catch (e) {
+      setState(() => error = e.message);
+    }
 
     if (!mounted) return;
 
@@ -41,10 +44,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Installer Info'),
         ),
         body: Center(
-          child: Text(
-            'Installed by:\n${installerInfo?.installer}\n${installerInfo?.installerName}',
-            textAlign: TextAlign.center,
-          ),
+          child: error != null
+              ? Text(error!, textAlign: TextAlign.center)
+              : Text(
+                  'Installed by:\n${installerInfo?.installer}\n${installerInfo?.installerName}',
+                  textAlign: TextAlign.center,
+                ),
         ),
       ),
     );
