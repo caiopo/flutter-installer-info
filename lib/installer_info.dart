@@ -39,6 +39,7 @@ enum Installer {
   amazonAppstore,
   huaweiAppGallery,
   samsungGalaxyStore,
+  packageInstaller,
   ruStore,
 
   // iOS
@@ -53,6 +54,7 @@ const _installerNames = {
   'com.amazon.venezia': Installer.amazonAppstore,
   'com.huawei.appmarket': Installer.huaweiAppGallery,
   'com.sec.android.app.samsungapps': Installer.samsungGalaxyStore,
+  'com.google.android.packageinstaller': Installer.packageInstaller,
   'ru.vk.store': Installer.ruStore,
 
   // iOS
