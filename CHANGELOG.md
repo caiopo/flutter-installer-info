@@ -1,3 +1,7 @@
+## 0.7.0
+* Add Package Installer
+* Add RuStore
+
 ## 0.6.0
 * Support different Kotlin versions by using jvmTarget.
 
